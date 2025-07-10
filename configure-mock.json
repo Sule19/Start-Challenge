@@ -1,0 +1,27 @@
+[
+  {
+    "ruta": "/api/testss",
+    "metodo": "POST",
+    "parametros_url": {},
+    "parametros_body": {},
+    "headers": {},
+    "codigo_estado": 200,
+    "contenido_respuesta": {
+      "default": {
+        "mensaje": "Petición recibida"
+      },
+      "condiciones": [
+        {
+          "si": {
+            "usuario": "admin"
+          },
+          "respuesta": {
+            "mensaje": "Bienvenido admin"
+          }
+        }
+      ]
+    },
+    "content_type": "application/json",
+    "id": 6
+  }
+]
