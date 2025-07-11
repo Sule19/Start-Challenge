@@ -1,0 +1,159 @@
+[
+  {
+    "ruta": "/api/hola",
+    "metodo": "GET",
+    "parametros_url": {},
+    "parametros_body": {},
+    "headers": {},
+    "codigo_estado": 200,
+    "contenido_respuesta": {
+      "mensaje": "Hola mundo"
+    },
+    "content_type": "application/json",
+    "id": 1
+  },
+  {
+    "ruta": "/api/saludo",
+    "metodo": "GET",
+    "parametros_url": {},
+    "parametros_body": {},
+    "headers": {},
+    "codigo_estado": 200,
+    "contenido_respuesta": {
+      "default": {
+        "mensaje": "Hola visitante"
+      },
+      "condiciones": [
+        {
+          "si": {
+            "usuario": "admin"
+          },
+          "respuesta": {
+            "mensaje": "Hola administrador"
+          }
+        }
+      ]
+    },
+    "content_type": "application/json",
+    "id": 2
+  },
+  {
+    "ruta": "/api/login",
+    "metodo": "POST",
+    "parametros_url": {},
+    "parametros_body": {},
+    "headers": {},
+    "codigo_estado": 200,
+    "contenido_respuesta": {
+      "default": {
+        "status": "error",
+        "mensaje": "Usuario o contraseña incorrecta"
+      },
+      "condiciones": [
+        {
+          "si": {
+            "usuario": "admin",
+            "clave": "1234"
+          },
+          "respuesta": {
+            "status": "ok",
+            "mensaje": "Bienvenido admin"
+          }
+        }
+      ]
+    },
+    "content_type": "application/json",
+    "id": 3
+  },
+  {
+    "ruta": "/api/logi",
+    "metodo": "POST",
+    "parametros_url": {},
+    "parametros_body": {},
+    "headers": {},
+    "codigo_estado": 200,
+    "contenido_respuesta": {
+      "default": {
+        "status": "error",
+        "mensaje": "Usuario o contraseña incorrecta"
+      },
+      "condiciones": [
+        {
+          "si": {
+            "usuario": "admin",
+            "clave": "1234"
+          },
+          "respuesta": {
+            "status": "ok",
+            "mensaje": "Bienvenido admin"
+          }
+        }
+      ]
+    },
+    "content_type": "application/json",
+    "id": 4
+  },
+  {
+    "ruta": "/api/data",
+    "metodo": "GET",
+    "parametros_url": {},
+    "parametros_body": {},
+    "headers": {},
+    "codigo_estado": 200,
+    "contenido_respuesta": {
+      "default": "<mensaje>Acceso denegado</mensaje>",
+      "condiciones": [
+        {
+          "si": {
+            "Authorization": "Bearer abc123"
+          },
+          "respuesta": "<mensaje>Acceso autorizado</mensaje>"
+        }
+      ]
+    },
+    "content_type": "application/xml",
+    "id": 5
+  },
+  {
+    "ruta": "/api/datsa",
+    "metodo": "GET",
+    "parametros_url": {},
+    "parametros_body": {},
+    "headers": {},
+    "codigo_estado": 200,
+    "contenido_respuesta": {
+      "default": "<mensaje>Acceso denegado</mensaje>",
+      "condiciones": [
+        {
+          "si": {
+            "Authorization": "Bearer abc123"
+          },
+          "respuesta": "<mensaje>Acceso autorizado</mensaje>"
+        }
+      ]
+    },
+    "content_type": "application/xml",
+    "id": 6
+  },
+  {
+    "ruta": "/api/datsaa",
+    "metodo": "GET",
+    "parametros_url": {},
+    "parametros_body": {},
+    "headers": {},
+    "codigo_estado": 200,
+    "contenido_respuesta": {
+      "default": "<mensaje>Acceso denegado</mensaje>",
+      "condiciones": [
+        {
+          "si": {
+            "Authorization": "Bearer abc123"
+          },
+          "respuesta": "<mensaje>Acceso autorizado</mensaje>"
+        }
+      ]
+    },
+    "content_type": "application/xml",
+    "id": 7
+  }
+]

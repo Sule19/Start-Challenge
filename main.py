@@ -8,6 +8,8 @@ from fastapi.responses import JSONResponse
 from pydantic import BaseModel, Field
 from typing import Dict, Any, List, Union
 import uvicorn
+from fastapi.responses import Response, JSONResponse
+import json
 
 # File path for persistent storage
 MOCK_SETTINGS_FILE = "configure-mock.json"
@@ -215,8 +217,7 @@ async def root():
         "total_stored_settings": len(mock_settings_storage)
     }
 
-from fastapi.responses import Response, JSONResponse
-import json
+
 
 @app.delete("/configure-mock")
 async def clear_all_mock_settings():
@@ -241,10 +242,12 @@ async def manejar_mock(path: str, request: Request):
     ruta_solicitada = "/" + path
     metodo_solicitado = request.method.upper()
 
+    body = {}
     try:
-        body = await request.json()
+        if request.headers.get("content-type", "").startswith("application/json"):
+            body = await request.json()
     except:
-        body = {}
+        pass
 
     headers = dict(request.headers)
     query_params = dict(request.query_params)
