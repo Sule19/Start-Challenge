@@ -1,0 +1,27 @@
+.text-editor {
+  width: 100%;
+}
+
+.editor-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #ecffb0;
+  border-radius: 8px;
+  background: white;
+  color: #54577c;
+  font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  resize: vertical;
+  transition: all 0.2s ease;
+}
+
+.editor-textarea:focus {
+  outline: none;
+  border-color: #4a7b9d;
+  box-shadow: 0 0 0 3px rgba(74, 123, 157, 0.1);
+}
+
+.editor-textarea::placeholder {
+  color: #9aa899;
+}

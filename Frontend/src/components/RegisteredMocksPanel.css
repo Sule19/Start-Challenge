@@ -1,0 +1,237 @@
+.registered-mocks-panel {
+  background: #faffd8;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(84, 87, 124, 0.1);
+  border: 1px solid #ecffb0;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.panel-header h2 {
+  color: #54577c;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.clear-all-btn {
+  background: #9aa899;
+  color: #faffd8;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.clear-all-btn:hover:not(:disabled) {
+  background: #54577c;
+}
+
+.clear-all-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.loading-state,
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  color: #9aa899;
+  text-align: center;
+}
+
+.empty-state p {
+  margin: 1rem 0 0 0;
+  font-size: 1rem;
+}
+
+.mocks-table-container {
+  overflow-x: auto;
+}
+
+.mocks-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(84, 87, 124, 0.05);
+}
+
+.mocks-table th {
+  background: #ecffb0;
+  color: #54577c;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.mocks-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #ecffb0;
+  color: #54577c;
+}
+
+.mocks-table tr:last-child td {
+  border-bottom: none;
+}
+
+.route-cell {
+  font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+  font-size: 0.875rem;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.content-type-cell {
+  font-size: 0.875rem;
+  color: #9aa899;
+}
+
+.method-badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.method-get {
+  background: #ecffb0;
+  color: #54577c;
+}
+.method-post {
+  background: #4a7b9d;
+  color: #faffd8;
+}
+.method-put {
+  background: #9aa899;
+  color: #faffd8;
+}
+.method-delete {
+  background: #54577c;
+  color: #faffd8;
+}
+.method-patch {
+  background: #ecffb0;
+  color: #54577c;
+}
+.method-options {
+  background: #9aa899;
+  color: #faffd8;
+}
+.method-head {
+  background: #9aa899;
+  color: #faffd8;
+}
+
+.status-badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.status-2xx {
+  background: #ecffb0;
+  color: #54577c;
+}
+.status-3xx {
+  background: #9aa899;
+  color: #faffd8;
+}
+.status-4xx {
+  background: #54577c;
+  color: #faffd8;
+}
+.status-5xx {
+  background: #4a7b9d;
+  color: #faffd8;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.action-btn {
+  padding: 0.375rem 0.75rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.try-btn {
+  background: #4a7b9d;
+  color: #faffd8;
+}
+
+.try-btn:hover {
+  background: #54577c;
+}
+
+.delete-btn {
+  background: #9aa899;
+  color: #faffd8;
+}
+
+.delete-btn:hover:not(:disabled) {
+  background: #54577c;
+}
+
+.delete-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+}
+
+.modal-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cancel-btn {
+  background: #ecffb0;
+  color: #54577c;
+}
+
+.cancel-btn:hover {
+  background: #9aa899;
+  color: #faffd8;
+}
+
+.confirm-btn {
+  background: #54577c;
+  color: #faffd8;
+}
+
+.confirm-btn:hover {
+  background: #4a7b9d;
+}

@@ -1,0 +1,122 @@
+.request-simulator {
+  background: #faffd8;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(84, 87, 124, 0.1);
+  border: 1px solid #ecffb0;
+}
+
+.simulator-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #ecffb0;
+  border-radius: 8px;
+  background: white;
+  color: #54577c;
+  font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  resize: vertical;
+  transition: all 0.2s ease;
+}
+
+.form-textarea:focus {
+  outline: none;
+  border-color: #4a7b9d;
+  box-shadow: 0 0 0 3px rgba(74, 123, 157, 0.1);
+}
+
+.send-request-btn {
+  background: linear-gradient(135deg, #9aa899 0%, #54577c 100%);
+  color: #faffd8;
+  border: none;
+  padding: 0.875rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.send-request-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(154, 168, 153, 0.3);
+}
+
+.send-request-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.response-section {
+  border-top: 2px solid #ecffb0;
+  padding-top: 1.5rem;
+}
+
+.response-section h3 {
+  color: #54577c;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+}
+
+.response-section h4 {
+  color: #54577c;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.response-meta {
+  margin-bottom: 1rem;
+}
+
+.response-info,
+.response-error {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.error-badge {
+  background: #54577c;
+  color: #faffd8;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.time-badge {
+  background: #ecffb0;
+  color: #54577c;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.response-content {
+  background: white;
+  border: 1px solid #ecffb0;
+  border-radius: 6px;
+  padding: 1rem;
+  font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #54577c;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.response-headers,
+.response-body {
+  margin-top: 1rem;
+}
